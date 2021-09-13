@@ -1,0 +1,13 @@
+use_frameworks!
+
+platform :ios, '9.0'
+
+target 'JJCycleView_Example' do
+  pod 'JJCycleView', :path => '../'
+
+  target 'JJCycleView_Tests' do
+    inherit! :search_paths
+
+    
+  end
+end
