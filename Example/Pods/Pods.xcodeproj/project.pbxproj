@@ -16,6 +16,11 @@
 		7D4C999A26EFBF500030462E /* JJProxy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D4C999526EFBF500030462E /* JJProxy.swift */; };
 		7D4C999B26EFBF500030462E /* JJCycleCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D4C999626EFBF500030462E /* JJCycleCell.swift */; };
 		7D4C999C26EFBF500030462E /* JJCycleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D4C999726EFBF500030462E /* JJCycleView.swift */; };
+		7D4C99A026EFBFD40030462E /* JJTestCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D4C999326EFBF500030462E /* JJTestCollectionViewCell.swift */; };
+		7D4C99A426EFBFD70030462E /* JJProxy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D4C999526EFBF500030462E /* JJProxy.swift */; };
+		7D4C99A526EFBFD90030462E /* JJPageControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D4C999426EFBF500030462E /* JJPageControl.swift */; };
+		7D4C99A926EFBFDC0030462E /* JJCycleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D4C999726EFBF500030462E /* JJCycleView.swift */; };
+		7D4C99AD26EFBFDF0030462E /* JJCycleCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D4C999626EFBF500030462E /* JJCycleCell.swift */; };
 		8006A6FFA16398A19A92F094C3758AE6 /* JJCycleView-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = D017E46563AABB3BE6D885BC22991E63 /* JJCycleView-dummy.m */; };
 		898BBB9DF4236E205062CBD934A950D6 /* JJCycleView-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 7C817B15F4CE469D15D94B27D252A5CA /* JJCycleView-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		DE39B797C84836EF09813BC26A02AF7E /* Pods-JJCycleView_Example-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = D86BEB4BC9A8332AE3A9436C325B52F9 /* Pods-JJCycleView_Example-dummy.m */; };
@@ -392,7 +397,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7D4C99AD26EFBFDF0030462E /* JJCycleCell.swift in Sources */,
+				7D4C99A526EFBFD90030462E /* JJPageControl.swift in Sources */,
+				7D4C99A026EFBFD40030462E /* JJTestCollectionViewCell.swift in Sources */,
 				DE39B797C84836EF09813BC26A02AF7E /* Pods-JJCycleView_Example-dummy.m in Sources */,
+				7D4C99A926EFBFDC0030462E /* JJCycleView.swift in Sources */,
+				7D4C99A426EFBFD70030462E /* JJProxy.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
