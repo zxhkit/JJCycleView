@@ -21,7 +21,7 @@ Pod::Spec.new do |s|
 TODO: Add long description of the pod here.
                        DESC
 
-  s.homepage         = 'https://github.com/820331062@qq.com/JJCycleView'
+  s.homepage         = 'https://github.com/zxhkit/JJCycleView'
   # s.screenshots     = 'www.example.com/screenshots_1', 'www.example.com/screenshots_2'
   s.license          = { :type => 'MIT', :file => 'LICENSE' }
   s.author           = { '820331062@qq.com' => 'zhouxuanhe@aliyun.com' }
@@ -39,6 +39,6 @@ TODO: Add long description of the pod here.
   # s.public_header_files = 'Pod/Classes/**/*.h'
   # s.frameworks = 'UIKit', 'MapKit'
   # s.dependency 'AFNetworking', '~> 2.3'
-   s.dependency 'Kingfisher', '6.0.1'
+#   s.dependency 'Kingfisher', '6.0.1'
 
 end

@@ -7,7 +7,7 @@
 //
 
 import UIKit
-import Kingfisher
+//import Kingfisher
 
 
 class JJCycleCell: UICollectionViewCell {
@@ -20,7 +20,7 @@ class JJCycleCell: UICollectionViewCell {
             switch imgSource {
             case let .SERVER(url):
                 print(url)
-                imgView.kf.setImage(with: url)
+//                imgView.kf.setImage(with: url)
             case let .LOCAL(name):
                 if let image = UIImage(named: name) {
                     imgView.image = image
@@ -113,7 +113,7 @@ class JJCycleCell: UICollectionViewCell {
             let labelY         = bounds.height - labelHeight
             descLabel.frame    = CGRect(x: margin, y: labelY, width: labelWidth, height: labelHeight)
             bottomView.frame   = CGRect(x: 0, y: labelY, width: imgView.bounds.width, height: labelHeight)
-            bringSubviewToFront(descLabel)
+            bringSubview(toFront: descLabel)
         }
     }
 }

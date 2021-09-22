@@ -18,10 +18,5 @@
   "platforms": {
     "ios": "10.0"
   },
-  "source_files": "JJCycleView/Classes/**/*",
-  "dependencies": {
-    "Kingfisher": [
-      "6.0.1"
-    ]
-  }
+  "source_files": "JJCycleView/Classes/**/*"
 }
