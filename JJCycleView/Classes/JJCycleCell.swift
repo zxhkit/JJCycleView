@@ -9,6 +9,7 @@
 import UIKit
 import Kingfisher
 
+
 class JJCycleCell: UICollectionViewCell {
     
     // MARK: 对外提供的属性
