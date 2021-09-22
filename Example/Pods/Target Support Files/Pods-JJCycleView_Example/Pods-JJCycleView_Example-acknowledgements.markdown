@@ -3,7 +3,7 @@ This application makes use of the following third party libraries:
 
 ## JJCycleView
 
-Copyright (c) 2021 ellisonpei <zhouxh@icbobei.cn>
+Copyright (c) 2021 1152167469@qq.com <zhouxuanhe@aliyun.com>
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
