@@ -3,7 +3,7 @@ This application makes use of the following third party libraries:
 
 ## JJCycleView
 
-Copyright (c) 2021 1152167469@qq.com <zhouxuanhe@aliyun.com>
+Copyright (c) 2021 ellisonpei <zhouxh@icbobei.cn>
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
@@ -28,7 +28,7 @@ THE SOFTWARE.
 
 The MIT License (MIT)
 
-Copyright (c) 2018 Wei Wang
+Copyright (c) 2019 Wei Wang
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal

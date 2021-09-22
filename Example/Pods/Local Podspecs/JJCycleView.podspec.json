@@ -1,7 +1,7 @@
 {
   "name": "JJCycleView",
-  "version": "0.1.0",
-  "summary": "This is a cycle scroll View.",
+  "version": "0.2.0",
+  "summary": "This is a Swift version of picture rotation",
   "description": "TODO: Add long description of the pod here.",
   "homepage": "https://github.com/zxhkit/JJCycleView",
   "license": {
@@ -9,20 +9,20 @@
     "file": "LICENSE"
   },
   "authors": {
-    "820331062@qq.com": "zhouxuanhe@aliyun.com"
+    "ellisonpei": "820331062@qq.com"
   },
   "source": {
     "git": "https://github.com/zxhkit/JJCycleView.git",
-    "tag": "0.1.0"
+    "tag": "v0.2.0"
   },
   "platforms": {
     "ios": "10.0"
   },
-  "swift_versions": "5.0",
   "source_files": "JJCycleView/Classes/**/*",
+  "swift_versions": "5.0",
   "dependencies": {
     "Kingfisher": [
-
+      "~> 6.0.0"
     ]
   },
   "swift_version": "5.0"

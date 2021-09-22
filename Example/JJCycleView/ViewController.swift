@@ -2,8 +2,8 @@
 //  ViewController.swift
 //  JJCycleView
 //
-//  Created by 1152167469@qq.com on 09/14/2021.
-//  Copyright (c) 2021 1152167469@qq.com. All rights reserved.
+//  Created by ellisonpei on 09/13/2021.
+//  Copyright (c) 2021 ellisonpei. All rights reserved.
 //
 
 import UIKit
@@ -20,5 +20,9 @@ class ViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
 
+    
+    
+    
+    
 }
 
