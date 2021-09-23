@@ -22,7 +22,7 @@ pod 'JJCycleView'
 
 ## Author
 
-xuanhe, 820331062@aliyun.com
+xuanhe, 820331062@qq.com
 
 ## License
 
