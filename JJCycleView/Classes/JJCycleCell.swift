@@ -13,14 +13,14 @@ import UIKit
 class JJCycleCell: UICollectionViewCell {
     
     // MARK: 对外提供的属性
-    var placeholderImage: UIImage? = UIImage(named: "placeholder_720x360")
+    var placeholderImage: UIImage?
     
-    var imgSource:JJImageSource = JJImageSource.LOCAL(name: "placeholder_720x360")  {
+    var imgSource:JJImageSource = JJImageSource.LOCAL(name: "")  {
         didSet {
             switch imgSource {
             case let .SERVER(url):
                 print(url)
-//                imgView.kf.setImage(with: url)
+//                imgView.kf.setImage(with: url, placeholder: placeholderImage, options: nil, completionHandler: nil)
             case let .LOCAL(name):
                 if let image = UIImage(named: name) {
                     imgView.image = image

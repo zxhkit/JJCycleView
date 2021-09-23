@@ -50,7 +50,7 @@ class JJCycleView: UIView, EndlessScrollProtocol, PageControlAlimentProtocol{
     /// 占位图
     var placeholderImage:UIImage? {
         didSet{
-            
+            collectionView.reloadData()
         }
     }
     
@@ -539,7 +539,11 @@ extension JJCycleView : UICollectionViewDelegate, UICollectionViewDataSource{
             
             delegate?.setupCustomView?(cycleView: self, cell: cell, index: index)
             cell.imgSource = proxy[index]
-            if let _ = descTextArray {
+            if let descTextArray = descTextArray {
+                if descTextArray.count > index {
+                    cell.descText = descTextArray[index]
+                }
+                
                 if let imageModel = imageContentModel {
                     cell.imageContentModel = imageModel
                 }
