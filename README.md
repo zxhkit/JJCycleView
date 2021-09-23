@@ -17,12 +17,25 @@ JJCycleView is available through [CocoaPods](https://cocoapods.org). To install
 it, simply add the following line to your Podfile:
 
 ```ruby
-pod 'JJCycleView'
+pod 'JJCycleView', '~> 0.3.0'
 ```
 
 ## Author
 
 xuanhe, 820331062@qq.com
+
+
+## Use
+
+```
+    cycleView = JJCycleView(frame: CGRect(x: 0, y: kNavBarHeight+100, width: KScreenWidth, height: 200), images: data, delegate: self, placeholderImage: nil)
+    cycleView.scrollDirrection = .horizontal
+    cycleView.imageArray = data
+    cycleView.isAutoScroll = true
+    view.addSubview(cycleView)
+
+```
+
 
 ## License
 
