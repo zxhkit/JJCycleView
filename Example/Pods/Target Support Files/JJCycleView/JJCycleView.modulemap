@@ -1,4 +1,4 @@
-framework module JJCycleView {
+module JJCycleView {
   umbrella header "JJCycleView-umbrella.h"
 
   export *

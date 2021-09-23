@@ -481,7 +481,7 @@ extension JJCycleView {
      
     func setupTimer() {
         timer = Timer(timeInterval: autoScrollInterval, target: self, selector: #selector(timerShowNext), userInfo: nil, repeats: true)
-        RunLoop.main.add(timer!, forMode: .commonModes)
+        RunLoop.main.add(timer!, forMode: .common)
     }
     
     func scrollViewWillBeginDragging(_ scrollView: UIScrollView) {
