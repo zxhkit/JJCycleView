@@ -1,7 +1,7 @@
 {
   "name": "JJCycleView",
   "version": "0.3.0",
-  "summary": "A short description of JJCycleView.",
+  "summary": "A short description of Cycle View.",
   "description": "TODO: Add long description of the pod here.",
   "homepage": "https://github.com/zxhkit/JJCycleView",
   "license": {
@@ -20,5 +20,10 @@
   },
   "swift_versions": "5.0",
   "source_files": "JJCycleView/Classes/**/*",
+  "requires_arc": true,
+  "frameworks": [
+    "UIKit",
+    "Foundation"
+  ],
   "swift_version": "5.0"
 }

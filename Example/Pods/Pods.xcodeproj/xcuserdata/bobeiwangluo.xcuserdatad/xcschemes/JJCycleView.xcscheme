@@ -15,7 +15,7 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "B5EB1FAB75CB78E601153483F94937E4"
-               BuildableName = "libJJCycleView.a"
+               BuildableName = "JJCycleView.framework"
                BlueprintName = "JJCycleView"
                ReferencedContainer = "container:Pods.xcodeproj">
             </BuildableReference>

@@ -1,4 +1,4 @@
-module Pods_JJCycleView_Tests {
+framework module Pods_JJCycleView_Tests {
   umbrella header "Pods-JJCycleView_Tests-umbrella.h"
 
   export *

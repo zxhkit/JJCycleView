@@ -9,7 +9,7 @@
 Pod::Spec.new do |s|
   s.name             = 'JJCycleView'
   s.version          = '0.3.0'
-  s.summary          = 'A short description of JJCycleView.'
+  s.summary          = 'A short description of Cycle View.'
 
 # This description is used to generate tags and improve search results.
 #   * Think: What does it do? Why did you write it? What is the focus?
@@ -29,16 +29,17 @@ TODO: Add long description of the pod here.
   # s.social_media_url = 'https://twitter.com/<TWITTER_USERNAME>'
 
   s.ios.deployment_target = '10.0'
+  s.platform     = :ios, '10.0'
   s.swift_version = '5.0'
   s.source_files = 'JJCycleView/Classes/**/*'
-  
+  s.requires_arc = true
   # s.resource_bundles = {
   #   'JJCycleView' => ['JJCycleView/Assets/*.png']
   # }
 
   # s.public_header_files = 'Pod/Classes/**/*.h'
-   s.frameworks = 'UIKit'
+   s.frameworks = 'UIKit', 'Foundation'
   # s.dependency 'AFNetworking', '~> 2.3'
-#   s.dependency 'Kingfisher', '6.0.0'
+#   s.dependency 'Kingfisher', '5.0.0'
 
 end
