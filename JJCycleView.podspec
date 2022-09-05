@@ -8,8 +8,8 @@
 
 Pod::Spec.new do |s|
   s.name             = 'JJCycleView'
-  s.version          = '0.3.0'
-  s.summary          = 'A short description of Cycle View.'
+  s.version          = '0.4.0'
+  s.summary          = 'This is a simple wireless loop scrolling view, very practical, written in the SWIFT language.'
 
 # This description is used to generate tags and improve search results.
 #   * Think: What does it do? Why did you write it? What is the focus?
@@ -40,6 +40,6 @@ TODO: Add long description of the pod here.
   # s.public_header_files = 'Pod/Classes/**/*.h'
    s.frameworks = 'UIKit', 'Foundation'
   # s.dependency 'AFNetworking', '~> 2.3'
-   s.dependency 'Kingfisher', '~> 6.3.1'
+#   s.dependency 'Kingfisher', '~> 6.3.1'
 
 end

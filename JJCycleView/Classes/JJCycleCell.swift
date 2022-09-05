@@ -7,7 +7,7 @@
 //
 
 import UIKit
-import Kingfisher
+//import Kingfisher
 
 
 class JJCycleCell: UICollectionViewCell {
@@ -20,7 +20,7 @@ class JJCycleCell: UICollectionViewCell {
             switch imgSource {
             case let .SERVER(url):
                 print(url)
-                imgView.kf.setImage(with: url, placeholder: placeholderImage, options: nil, completionHandler: nil)
+//                imgView.kf.setImage(with: url, placeholder: placeholderImage, options: nil, completionHandler: nil)
             case let .LOCAL(name):
                 if let image = UIImage(named: name) {
                     imgView.image = image

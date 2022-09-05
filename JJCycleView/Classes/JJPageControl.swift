@@ -14,6 +14,9 @@ protocol JJPageControlDelegate {
 
 class JJPageControl: UIControl {
     
+    /// 闭包点击事件
+    var clickPointClosure: ((_ num : Int) -> Void)?
+
     /// 当前点的大小
     var currentPointSize: CGSize = CGSize(width: 6, height: 6) {
         didSet{
@@ -78,7 +81,7 @@ class JJPageControl: UIControl {
     ///左右间距
     var leftAndRightSpacing: CGFloat = 10 {
         didSet{
-            if leftAndRightSpacing <= 0 {
+            if leftAndRightSpacing < 0 {
                 leftAndRightSpacing = 0
             }else{
                 if numberOfPages > 0 {
@@ -119,8 +122,44 @@ class JJPageControl: UIControl {
             }
         }
     }
+    ///当前选中点的layer宽
+    var currentLayerBorderWidth: CGFloat = 1 {
+        didSet{
+            if numberOfPages > 0 {
+                createPointView()
+            }
+        }
+    }
+    
+    ///其他点的layer宽
+    var otherLayerBorderWidth: CGFloat = 1 {
+        didSet{
+            if numberOfPages > 0 {
+                createPointView()
+            }
+        }
+    }
+    
+    ///当前选中点的layer颜色
+    var currentLayerBorderColor: UIColor? {
+        didSet{
+            if numberOfPages > 0 {
+                createPointView()
+            }
+        }
+    }
+    ///其他选中点的layer颜色
+    var otherLayerBorderColor: UIColor? {
+        didSet{
+            if numberOfPages > 0 {
+                createPointView()
+            }
+        }
+    }
+    
+    
     /// 当只有一个点的时候是否隐藏
-    var hidesForSinglePage = false {
+    var isHidesForSinglePage = false {
         didSet{
             if numberOfPages > 0 {
                 createPointView()
@@ -166,7 +205,7 @@ class JJPageControl: UIControl {
             return
         }
         
-        if hidesForSinglePage == true ,numberOfPages == 1{
+        if isHidesForSinglePage == true ,numberOfPages == 1{
             return
         }
         //居中控件
@@ -202,11 +241,19 @@ class JJPageControl: UIControl {
         for page in 0..<numberOfPages {
             if page == currentPage {
                 let currentPoint = UIImageView(frame: CGRect(x: startX, y: startY_current, width: currentPointSize.width, height: currentPointSize.height))
-                currentPoint.layer.cornerRadius = pointCornerRadius;
+                currentPoint.layer.masksToBounds = true
+                currentPoint.layer.cornerRadius = pointCornerRadius
                 currentPoint.tag = 1000 + page
                 currentPoint.backgroundColor = currentColor
                 currentPoint.isUserInteractionEnabled = true
                 currentPoint.image = currentBkImage
+                
+                if self.currentLayerBorderColor != nil {
+                    currentPoint.layer.borderColor = self.currentLayerBorderColor?.cgColor
+                    currentPoint.layer.borderWidth = self.currentLayerBorderWidth
+                }else{
+                    currentPoint.layer.borderWidth = 0
+                }
                 
                 if isCanClickPoint == true {
                     let tapGesture = UITapGestureRecognizer(target: self, action: #selector(clickAction(_:)))
@@ -222,11 +269,19 @@ class JJPageControl: UIControl {
                 dots.append(currentPoint)
             }else{
                 let otherPoint = UIImageView(frame: CGRect(x: startX, y: startY_other, width: otherPointSize.width, height: otherPointSize.height))
-                otherPoint.layer.cornerRadius = pointCornerRadius;
+                otherPoint.layer.masksToBounds = true
+                otherPoint.layer.cornerRadius = pointCornerRadius
                 otherPoint.tag = 1000 + page
                 otherPoint.backgroundColor = otherColor
                 otherPoint.isUserInteractionEnabled = true
                 otherPoint.image = otherBkImage
+                
+                if self.otherLayerBorderColor != nil {
+                    otherPoint.layer.borderColor = self.otherLayerBorderColor?.cgColor
+                    otherPoint.layer.borderWidth = self.otherLayerBorderWidth
+                }else{
+                    otherPoint.layer.borderWidth = 0
+                }
                 
                 if isCanClickPoint == true {
                     let tapGesture = UITapGestureRecognizer(target: self, action: #selector(clickAction(_:)))
@@ -245,21 +300,26 @@ class JJPageControl: UIControl {
     }
     
     
-    @objc func clickAction(_ recognizer: UITapGestureRecognizer) {
+    @objc private func clickAction(_ recognizer: UITapGestureRecognizer) {
         
         if let tag = recognizer.view?.tag {
             let index = tag - 1000
             if index >= 0 {
                 currentPage = index
                 delegate?.jj_pageControlClick(pageControl: self, index: index)
+                if let closure = self.clickPointClosure {
+                    closure(index)
+                }
             }
         }
     }
     
+    
+    
     func clearView() {
-        //        subviews.forEach { subView in
-        //            subView.removeFromSuperview()
-        //        }
+        // subviews.forEach { subView in
+        //     subView.removeFromSuperview()
+        // }
         
         subviews.forEach { $0.removeFromSuperview()}
         dots.removeAll()
@@ -295,6 +355,20 @@ class JJPageControl: UIControl {
             oldDot.backgroundColor = .clear
         }else{
             oldDot.backgroundColor = otherColor
+        }
+        
+        if self.currentLayerBorderColor != nil {
+            newDot.layer.borderColor = self.currentLayerBorderColor?.cgColor
+            newDot.layer.borderWidth = self.currentLayerBorderWidth
+        }else{
+            newDot.layer.borderWidth = 0
+        }
+        
+        if self.otherLayerBorderColor != nil {
+            oldDot.layer.borderColor = self.otherLayerBorderColor?.cgColor
+            oldDot.layer.borderWidth = self.otherLayerBorderWidth
+        }else{
+            oldDot.layer.borderWidth = 0
         }
         
         var oldMinx = oldFrame.minX
@@ -383,3 +457,4 @@ class JJPageControl: UIControl {
         }
     }
 }
+

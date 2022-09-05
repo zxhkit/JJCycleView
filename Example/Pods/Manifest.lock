@@ -1,22 +1,15 @@
 PODS:
-  - JJCycleView (0.3.0):
-    - Kingfisher (~> 6.3.1)
-  - Kingfisher (6.3.1)
+  - JJCycleView (0.4.0)
 
 DEPENDENCIES:
   - JJCycleView (from `../`)
-
-SPEC REPOS:
-  trunk:
-    - Kingfisher
 
 EXTERNAL SOURCES:
   JJCycleView:
     :path: "../"
 
 SPEC CHECKSUMS:
-  JJCycleView: e4dd859f9cf81fa096fa0c495bdacf15d2f6ca7f
-  Kingfisher: 016c8b653a35add51dd34a3aba36b580041acc74
+  JJCycleView: f18bb1eb05e0327d9d7ecb2bc59f5f390bbbb259
 
 PODFILE CHECKSUM: 6a15b1841473d3719340b489027d9d992add6093
 

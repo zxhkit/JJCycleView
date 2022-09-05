@@ -1,7 +1,7 @@
 {
   "name": "JJCycleView",
-  "version": "0.3.0",
-  "summary": "A short description of Cycle View.",
+  "version": "0.4.0",
+  "summary": "This is a simple wireless loop scrolling view, very practical, written in the SWIFT language.",
   "description": "TODO: Add long description of the pod here.",
   "homepage": "https://github.com/zxhkit/JJCycleView",
   "license": {
@@ -13,7 +13,7 @@
   },
   "source": {
     "git": "https://github.com/zxhkit/JJCycleView.git",
-    "tag": "0.3.0"
+    "tag": "0.4.0"
   },
   "platforms": {
     "ios": "10.0"
@@ -25,10 +25,5 @@
     "UIKit",
     "Foundation"
   ],
-  "dependencies": {
-    "Kingfisher": [
-      "~> 6.3.1"
-    ]
-  },
   "swift_version": "5.0"
 }

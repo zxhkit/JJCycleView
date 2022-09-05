@@ -83,6 +83,16 @@ protocol PageControlAlimentProtocol {
     var pageControlOtherColor: UIColor { get set }
     /// 当前点颜色
     var pageControlCurrentColor: UIColor { get set }
+    ///当前选中点的layer宽
+    var pageControlCurrentLayerBorderWidth: CGFloat? { get set }
+    ///其他点的layer宽
+    var pageControlOtherLayerBorderWidth: CGFloat? { get set }
+    ///当前选中点的layer颜色
+    var pageControlCurrentLayerBorderColor: UIColor? { get set }
+    ///其他选中点的layer颜色
+    var pageControlOtherLayerBorderColor: UIColor? { get set }
+    
+    
     /// 其他点背景图片
     var pageControlOtherBkImage: UIImage? { get set }
     /// 当前点背景图片

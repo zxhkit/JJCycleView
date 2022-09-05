@@ -200,6 +200,28 @@ class JJCycleView: UIView, EndlessScrollProtocol, PageControlAlimentProtocol{
     }
     
     
+    var pageControlOtherLayerBorderColor: UIColor? {
+        didSet{
+            setupPageControl()
+        }
+    }
+    var pageControlCurrentLayerBorderColor: UIColor?{
+        didSet{
+            setupPageControl()
+        }
+    }
+    var pageControlOtherLayerBorderWidth: CGFloat? {
+        didSet{
+            setupPageControl()
+        }
+    }
+    var pageControlCurrentLayerBorderWidth: CGFloat?{
+        didSet{
+            setupPageControl()
+        }
+    }
+    
+    
     // MARK: -----
     /// 轮换轮播主体
     private lazy var collectionView: UICollectionView = {
@@ -457,7 +479,7 @@ extension JJCycleView {
                 pageControlFrame = CGRect(x: 0, y: self.bounds.height - 20, width: self.bounds.width, height: 20)
             }
             pageControl = JJPageControl(frame: pageControlFrame!)
-            pageControl?.hidesForSinglePage = true
+            pageControl?.isHidesForSinglePage = true
             pageControl?.currentColor = self.pageControlCurrentColor
             pageControl?.otherColor = self.pageControlOtherColor
             pageControl?.currentBkImage = self.pageControlCurrentBkImage
@@ -471,6 +493,10 @@ extension JJCycleView {
             pageControl?.leftAndRightSpacing = self.pageControlLeftAndRightSpacing
             pageControl?.isCanClickPoint = self.isCanClickPageControlPoint
             pageControl?.numberOfPages = imageArray?.count ?? 0
+            pageControl?.currentLayerBorderWidth = self.pageControlCurrentLayerBorderWidth ?? 1
+            pageControl?.otherLayerBorderWidth = self.pageControlOtherLayerBorderWidth ?? 1
+            pageControl?.currentLayerBorderColor = self.pageControlCurrentLayerBorderColor
+            pageControl?.otherLayerBorderColor = self.pageControlOtherLayerBorderColor
             
             addSubview(pageControl!)
         }
